@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nick's Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+
+    body {
+		font-family: 'Inter', Arial, sans-serif;
+		line-height: 1.7;
+		margin: 0;
+		padding: 0;
+		background-color: #101010;
+		color: #ffffff;
+		transition: all 0.3s ease-in-out;
+    }
+    header {
+		background-color: #1e1e1e;
+		color: #00c2ff;
+		padding: 20px 0;
+		text-align: center;
+		width: 60%;
+		margin: 30px auto;
+		border-radius: 35px;
+		box-shadow: 0 4px 12px rgba(0, 194, 255, 0.2);
+    }
+	h1, h2 {
+		margin: 0 0 10px;
+	}
+
+	h2 {
+		color: #00c2ff;
+	}
+	p {
+		padding: 0 0 10px;
+		margin: 0;
+		word-wrap: break-word;
+		color: #bbbbbb;
+	}
+	.column-wrapper {
+		display: flex; 
+		flex-wrap: wrap;
+		gap: 20px; 
+		justify-content: center;
+		padding: 20px;
+    }
+	.column {
+		display: flex; 
+		flex-direction: column;
+		gap: 20px;
+		width: 45%; 
+		min-width: 300px;
+	}
+    .container {
+		background-color: #2a2a2a;
+		border-radius: 35px;
+		padding: 20px;	
+		transition: transform 0.2s, box-shadow 0.2s;
+    }
+	.container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,194,255,0.3);
+    }
+	.flex-column {
+		flex-direction: column;
+	}
+	.container:last-child {
+
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .container {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+	.container:nth-child(1) { animation-delay: 0.2s; }
+    .container:nth-child(2) { animation-delay: 0.5s; }
+    .container:nth-child(3) { animation-delay: 0.8s; }
+	.container:nth-child(4) { animation-delay: 1.2s; }
+	
+	@keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+	
+	button[type="submit"] {
+		background-color: #00c2ff;
+		color: #101010;
+		border: none;
+		border-radius: 8px;
+		padding: 10px 20px;
+		cursor: pointer;
+		font-weight: 600;
+		font-size: 1rem;
+		transition: background-color 0.2s ease-in-out;
+	}
+	button[type="submit"]:hover {
+		background-color: #00ffff;
+	}
+	form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-top: 15px;
+	}
+
+	input[type="email"],
+	textarea {
+		background-color: #1e1e1e;
+		color: #ffffff;
+		border: 1px solid #00c2ff;
+		border-radius: 8px;
+		padding: 10px;
+		font-size: 1rem;
+		resize: vertical;
+		transition: border 0.2s ease-in-out;
+	}
+
+	input[type="email"]:focus,
+	textarea:focus {
+		border: 1px solid #00ffff;
+		outline: none;
+	}
+  </style>
+</head>
+<body>
+
+	<header>
+	<h1>Nick Vitale</h1>
+	</header>
+
+	<div class="column-wrapper">
+		<div class="column">
+		
+			<div class="container flex-column">
+				<h2>
+					Professional Info
+				</h2>
+				
+				<p>
+					I am a versatile and results-driven software engineer with experience across front-end and back-end development, batch processing, and large-scale data integration. Proficient in technologies such as Angular, HTML, CSS, Java, Oracle PL/SQL, and ETL frameworks. Demonstrated expertise in optimizing high-traffic database queries and maintaining mission-critical systems with 24/7 on-call support.
+				</p>
+				<p>
+					Currently serving as the innovation owner for a high-impact application that processes over $1B in customer transactions monthly, awarding points to more than 10,000 retail locations. Proven track record in leading complex platform migrations, including Autosys to Tidal, Azure DevOps to GitHub Actions, and Java-based systems to Oracle PL/SQL. Recognized for delivering stable, efficient, and scalable solutions that align with business goals and enhance operational performance.
+				</p>
+			</div>
+			
+			<div class="container">
+				<h2>Beyond the Screen</h2>
+				<p>
+					I earned my degree in Computer Science from the University of Texas at Dallas, driven by a natural curiosity and a passion for hands-on problem-solving. I’ve always been fascinated by how things work — whether it’s hardware, software, or anything in between.
+				</p>
+				<p>
+					Outside of my professional work, I’ve applied this mindset to a variety of personal projects. These include building my own desktop PC, assembling a custom mechanical keyboard, constructing a functional watch, and even dismantling my car’s dashboard to upgrade its lighting system from traditional bulbs to modern LEDs.				
+				</p>
+				<p>
+					These projects reflect not just a technical skill set, but a genuine enjoyment of tinkering, building, and improving systems. A mindset I bring to every challenge I take on.
+				</p>
+			</div>
+			
+		</div>
+		
+		<div class="column">
+		
+			<div class="container flex-column">
+				<h2>Outside of Work</h2>
+				<p>
+					Outside of the office, work-life balance is important. Stamps fill a passport from Italy, Aruba, London, and Edinburgh, with future trips to Paris or Japan. Relaxation comes from watching TV, playing video games, and cooking. My signature dish is a simple pasta Aglio e Olio.
+				</p>
+			</div>
+			
+			<div class="container">
+				<h2>Like my experience?</h2>
+				<p>
+				  Please feel free to send me an email and lets discuss future opportunities further!
+				</p>
+				
+				<form  id="contact-form" action="https://formspree.io/f/mkgvkvkq" method="POST">
+					<label for="email">Your Email</label>
+					<input placeholder="Email"  type="email" name="_replyto">
+					<label for="message">Message</label>
+					<textarea  placeholder="Type your message here..." name="body" required></textarea>
+					<button type="submit">Send Message</button>
+				</form>
+			</div>
+			
+		</div>
+
+		<div class="container flex-column" style="width: 90%">
+			<h2>The Making Of This Site</h2>
+			<p>This website is hosted using GitHub Pages, a static site hosting service. I chose this platform to showcase foundational front-end development skills, specifically in HTML, CSS, and JavaScript.</p>
+			<p>One of the challenges I encountered during development was implementing a contact form that could send emails. Since GitHub Pages only supports static content, it lacks the server-side capabilities required to process and send email submissions.</p>
+			<p>To work around this limitation, I integrated a third-party service that accepts POST requests and securely forwards the submitted form data to my email. My email address remains protected behind a unique API key. Additionally, I’ve configured domain restrictions so that even if someone inspects the site and attempts to reuse the key elsewhere, the request would be rejected.</p>
+			<p>This solution demonstrates not only the use of static site hosting, but also how to securely integrate client-side forms with external APIs.</p>
+		</div>
+
+		
+	</div>
+	
+	<script>
+		const form = document.getElementById('contact-form');
+
+		form.addEventListener('submit', async function(event) {
+		event.preventDefault();
+
+		const formData = new FormData(form);
+
+		try {
+		  const response = await fetch(form.action, {
+			method: form.method,
+			body: formData,
+			headers: {
+			  'Accept': 'application/json'
+			}
+		  });
+
+		  if (response.ok) {
+			alert('✅ Message sent successfully!');
+			form.reset();
+		  } else {
+			alert('❌ Oops! Something went wrong.');
+		  }
+		} catch (error) {
+		  alert('❌ Failed to send message. Check your internet or try again later.');
+		}
+		});
+	</script>
+
+</body>
+</html>
