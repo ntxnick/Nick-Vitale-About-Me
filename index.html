@@ -66,6 +66,9 @@
 	.flex-column {
 		flex-direction: column;
 	}
+	.text-pad {
+		padding-left: 10px;
+	}
 	.container:last-child {
 
       color: #ffffff;
@@ -191,12 +194,12 @@
 			
 		</div>
 
-		<div class="container flex-column" style="width: 90%">
-			<h2>The Making Of This Site</h2>
-			<p>This website is hosted using GitHub Pages, a static site hosting service. I chose this platform to showcase foundational front-end development skills, specifically in HTML, CSS, and JavaScript.</p>
-			<p>One of the challenges I encountered during development was implementing a contact form that could send emails. Since GitHub Pages only supports static content, it lacks the server-side capabilities required to process and send email submissions.</p>
-			<p>To work around this limitation, I integrated a third-party service that accepts POST requests and securely forwards the submitted form data to my email. My email address remains protected behind a unique API key. Additionally, I’ve configured domain restrictions so that even if someone inspects the site and attempts to reuse the key elsewhere, the request would be rejected.</p>
-			<p>This solution demonstrates not only the use of static site hosting, but also how to securely integrate client-side forms with external APIs.</p>
+		<div class="container flex-column" style="width: 90%; padding 20px 10px;">
+			<h2 class="text-pad">The Making Of This Site</h2>
+			<p class="text-pad">This website is hosted using GitHub Pages, a static site hosting service. I chose this platform to showcase foundational front-end development skills, specifically in HTML, CSS, and JavaScript.</p>
+			<p class="text-pad">One of the challenges I encountered during development was implementing a contact form that could send emails. Since GitHub Pages only supports static content, it lacks the server-side capabilities required to process and send email submissions.</p>
+			<p class="text-pad">To work around this limitation, I integrated a third-party service that accepts POST requests and securely forwards the submitted form data to my email. My email address remains protected behind a unique API key. Additionally, I’ve configured domain restrictions so that even if someone inspects the site and attempts to reuse the key elsewhere, the request would be rejected.</p>
+			<p class="text-pad">This solution demonstrates not only the use of static site hosting, but also how to securely integrate client-side forms with external APIs.</p>
 		</div>
 
 		
